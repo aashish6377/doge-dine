@@ -6,7 +6,6 @@ const { body, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-console.log(process.env.SECRET_KEY);
 
 router.post(
   "/createuser",
