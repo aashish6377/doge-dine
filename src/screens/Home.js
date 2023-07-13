@@ -76,10 +76,8 @@ export default function Home() {
                             className="col-12 col-md-6 col-lg-3"
                           >
                             <Card
-                              foodName={filterItems.name}
+                              foodItem={filterItems}
                               options={filterItems.options[0]}
-                              imgSrc={filterItems.img}
-                              description={filterItems.description}
                             ></Card>
                           </div>
                         );
