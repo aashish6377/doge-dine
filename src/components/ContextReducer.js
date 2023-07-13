@@ -17,7 +17,45 @@ const reducer = (state, action) => {
           img: action.img,
         },
       ];
+    case "REMOVE":
+      let newArr = [...state];
+      newArr.splice(action.index, 1);
+      return newArr;
+    // case "UPDATE":
+    //   let arr = [...state];
+    //   console.log("arr", arr);
+    //   arr.find((food, index) => {
+    //     if (food.id === action.id) {
+    //       console.log(
+    //         food.qty,
+    //         parseInt(action.qty),
+    //         action.price + food.price
+    //       );
+    //       arr[index] = {
+    //         ...food,
+    //         qty: parseInt(action.qty) + parseInt(food.qty),
+    //         price: action.price + food.price,
+    //       };
+    //     }
+    //     return arr;
+    //   });
+    //   return arr;
 
+    case "UPDATE":
+      let arr = [...state];
+      console.log(arr);
+      arr.find((a, idx) => {
+        console.log(a, action);
+        if (a.id === action.id) {
+          console.log("updated", action, a);
+          arr[idx] = {
+            ...a,
+            qty: parseInt(action.qty) + a.qty,
+            price: action.price + a.price,
+          }; // a is the array jo abhi tk cart m prda tha and action contains the updated object's details
+        }
+      });
+      return arr;
     default:
       console.log("Error in Reducer");
   }
