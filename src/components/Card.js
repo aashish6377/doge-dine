@@ -72,7 +72,7 @@ export default function Card(props) {
           style={{ height: "250px", objectFit: "fill" }}
         />
         <div className="card-body">
-          <h5 className="card-title">{props.foodItem.Name}</h5>
+          <h5 className="card-title">{props.foodItem.name}</h5>
           {/* <p className="card-text">{props.description}</p> */}
           <div className="container w-100">
             <select
