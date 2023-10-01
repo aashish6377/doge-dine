@@ -43,7 +43,7 @@ const reducer = (state, action) => {
 
     case "UPDATE":
       let arr = [...state];
-      console.log(arr);
+      // console.log(arr);
       arr.find((a, idx) => {
         console.log(a, action);
         if (a.id === action.id) {
